@@ -10,7 +10,8 @@ const cloudinary = require("cloudinary");
 exports.createUser = catchAsyncErrors(async (req, res, next) => {
   try {
     const { name, email, password, avatar } = req.body;
-
+    console.log("new user is ",req.body);
+    
     let user = await User.findOne({ email });
     if (user) {
       return res
@@ -43,6 +44,8 @@ exports.createUser = catchAsyncErrors(async (req, res, next) => {
 // Login User
 exports.loginUser = catchAsyncErrors(async (req, res, next) => {
   const { email, password } = req.body;
+
+  console.log("login user is ",req.body);
 
   if (!email || !password) {
     return next(new ErrorHandler("Please enter the email & password", 400));
