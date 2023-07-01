@@ -19,6 +19,11 @@ app.use(fileUpload({useTempFiles: true}));
 // config
 
 // dotenv.config({ path: "backend/config/config.env" });
+// STRIPE_SECRET_KEY=sk_test_51N220GSJ2EiT5z33HILsA8OLQPVqkYk6cYVoAXS1MN21tMLsIB2Zc9AJHGAHMBK5sv5VOB8qeKFHzHhnsfBN7nRz00lavPlKWY
+// STRIPE_API_KEY=pk_test_51N220GSJ2EiT5z33foJdifw1DLvmlweuYcwLABdfi1arc5hbynjtcnPYt0ikSjOh9XsZPeFJ1uudXTjQZmiQyeCL00OZoG7FiT
+
+
+
 
 dotenv.config({ path: "./config/config.env" });
 

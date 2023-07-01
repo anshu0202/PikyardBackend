@@ -3,6 +3,7 @@ const sendToken = (user,statusCode,res) =>{
 
     const token = user.getJwtToken();
 
+
     // Options for cookies
    const options = {
        expires: new Date(
@@ -10,6 +11,9 @@ const sendToken = (user,statusCode,res) =>{
        ),
        httpOnly: true
    };
+
+   console.log("token is ",token);
+
 
    res.status(statusCode).cookie("token",token,options).json({
        success: true,
